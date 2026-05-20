@@ -1,0 +1,194 @@
+html{
+    scroll-behavior:smooth;
+}*
+{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#eef2f7;
+    color:#1e293b;
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 40px;
+    background:white;
+    border-bottom:1px solid #e2e8f0;
+
+    position:sticky;
+    top:0;
+}
+
+nav h2{
+    margin:0;
+    color:#2563eb;
+}
+
+nav a{
+    color:#475569;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.2s;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
+.hero{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+.hero p{
+    max-width:700px;
+    margin:0 auto;
+    color:#64748b;
+    font-size:20px;
+    line-height:1.6;
+}
+
+.botones{
+    margin-top:30px;
+}
+
+.botones a,
+.card a{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:12px 18px;
+    border-radius:10px;
+    text-decoration:none;
+    margin:5px;
+    transition:0.2s;
+}
+
+.botones a:hover,
+.card a:hover{
+    transform:translateY(-2px);
+}
+
+.botones .secundario{
+    background:#e2e8f0;
+    color:#1e293b;
+}
+
+section{
+    padding:60px 40px;
+}
+
+section h2{
+    font-size:34px;
+    margin-bottom:25px;
+    color:#0f172a;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    border:1px solid #e2e8f0;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    transition:0.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.card h3{
+    margin-top:0;
+    font-size:24px;
+    color:#0f172a;
+}
+
+.card p,
+.sobre-mi p,
+.contacto p{
+    color:#64748b;
+    line-height:1.6;
+}
+
+.card span{
+    display:block;
+    margin:15px 0;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+.sobre-mi,
+.contacto{
+    max-width:900px;
+}
+
+.enlaces-contacto{
+    margin-top:20px;
+}
+
+.enlaces-contacto a{
+    display:inline-block;
+    margin-right:10px;
+    margin-bottom:10px;
+
+    background:white;
+    color:#1e293b;
+
+    padding:12px 18px;
+    border-radius:10px;
+
+    text-decoration:none;
+    border:1px solid #dbeafe;
+
+    transition:0.2s;
+}
+
+.enlaces-contacto a:hover{
+    background:#2563eb;
+    color:white;
+}
+
+.card img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:15px;
+    border:1px solid #e2e8f0;
+}
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    section{
+        padding:40px 20px;
+    }
+
+}
