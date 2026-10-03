@@ -229,3 +229,32 @@ background:#0f172a;
     display:block;
     font-size:18px;
 }
+
+
+
+
+.tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tech i {
+  font-size: 45px;
+}
+
+.tech span {
+  font-weight: bold;
+}
+
+
+
+.tech i {
+  transition: transform 0.3s ease;
+}
+
+.tech:hover i {
+  transform: scale(1.2);
+}
