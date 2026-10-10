@@ -1,62 +1,300 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#07110d">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Asistente Virtual 3D de Javier Carrasco">
   <title>Asistente Virtual 3D | Javier Carrasco</title>
-  <link rel="stylesheet" href="static/style.css">
+
+  <link rel="stylesheet" href="style.css">
+
   <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header class="topbar"><a href="../../" class="back">← Volver al portafolio</a><span class="brand">JAVI<span>_OS</span> / ASISTENTE_3D</span></header>
-  <main class="layout">
-    <section class="chat-panel" aria-label="Chat del asistente">
-      <p class="eyebrow">// PROYECTO INTERACTIVO</p>
-      <h1>Asistente <span>Virtual 3D</span></h1>
-      <p class="intro">Habla o escribe. Soy un asistente de demostración con respuestas programadas y síntesis de voz.</p>
-      <div id="respuesta" class="messages" role="log" aria-live="polite" aria-relevant="additions">
-        <div class="message assistant"><strong>Robot</strong><p>¡Hola! Pregúntame por mis servicios, tecnología, proyectos o contacto.</p></div>
-      </div>
-      <form id="formulario" class="composer">
-        <label class="sr-only" for="mensaje">Escribe tu mensaje</label>
-        <input id="mensaje" name="mensaje" type="text" maxlength="500" placeholder="Escribe tu mensaje..." autocomplete="off" required>
-        <button type="submit" class="send">Enviar</button>
-      </form>
-      <div class="controls"><button id="mic" type="button">🎤 Hablar</button><button id="voz" type="button">🔊 Leer última respuesta</button><button id="silenciar" type="button">🔇 Silenciar</button></div>
-      <p id="estado" class="status" role="status">Micrófono disponible en navegadores compatibles (requiere permiso).</p>
-    </section>
-    <section class="avatar-panel" aria-label="Robot tridimensional animado">
-      <div class="panel-heading"><span class="live-dot"></span> AVATAR ONLINE <span class="panel-code">MODEL: JAVI_BOT_V1</span></div>
-      <a-scene embedded renderer="antialias: true; colorManagement: true" background="color: #08120e" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-        <a-entity light="type: ambient; intensity: 0.8; color: #9bcbb0"></a-entity>
-        <a-entity light="type: directional; intensity: 1.6; color: #e7fff0" position="-2 4 3"></a-entity>
-        <a-entity light="type: point; intensity: 1.2; color: #35ff89; distance: 6" position="2 2 0"></a-entity>
-        <a-plane position="0 -1.35 -3" rotation="-90 0 0" width="10" height="10" color="#0d2017"></a-plane>
-        <a-ring position="0 -1.33 -3" rotation="-90 0 0" radius-inner="0.92" radius-outer="1.02" color="#29ed80" material="opacity: 0.7; transparent: true"></a-ring>
-        <a-entity id="robot" position="0 -0.05 -3" animation="property: position; to: 0 0.10 -3; dir: alternate; loop: true; dur: 1800; easing: easeInOutSine">
-          <a-cylinder position="0 -0.76 0" radius="0.40" height="0.95" color="#182c26" metalness="0.55" roughness="0.35"></a-cylinder>
-          <a-box position="0 -0.62 0.34" width="0.36" height="0.19" depth="0.05" color="#2af78a" material="emissive: #18b75d; emissiveIntensity: 0.65"></a-box>
-          <a-sphere position="-0.55 -0.65 0" radius="0.20" color="#172a23"></a-sphere>
-          <a-sphere position="0.55 -0.65 0" radius="0.20" color="#172a23"></a-sphere>
-          <a-cylinder position="-0.56 -1.00 0" radius="0.15" height="0.58" color="#21382e"></a-cylinder>
-          <a-cylinder position="0.56 -1.00 0" radius="0.15" height="0.58" color="#21382e"></a-cylinder>
-          <a-cylinder position="0 0.05 0" radius="0.15" height="0.25" color="#3b5a4b"></a-cylinder>
-          <a-box position="0 0.61 0" width="1.12" height="0.93" depth="0.74" color="#172a24" metalness="0.5" roughness="0.28"></a-box>
-          <a-box position="0 0.65 0.386" width="0.94" height="0.60" depth="0.025" color="#06140e"></a-box>
-          <a-box position="-0.25 0.71 0.409" width="0.23" height="0.10" depth="0.02" color="#39ff91" material="emissive: #19ff74; emissiveIntensity: 1.3"></a-box>
-          <a-box position="0.25 0.71 0.409" width="0.23" height="0.10" depth="0.02" color="#39ff91" material="emissive: #19ff74; emissiveIntensity: 1.3"></a-box>
-          <a-box id="boca" position="0 0.43 0.411" width="0.31" height="0.035" depth="0.02" color="#39ff91" material="emissive: #19ff74; emissiveIntensity: 1"></a-box>
-          <a-cylinder position="0 1.20 0" radius="0.035" height="0.28" color="#456a54"></a-cylinder>
-          <a-sphere position="0 1.38 0" radius="0.10" color="#3cff90" material="emissive: #15ff65; emissiveIntensity: 1"></a-sphere>
-          <a-torus position="0 0.62 -0.40" radius="0.58" radius-tubular="0.018" color="#20d36e" rotation="0 0 0" material="opacity: 0.5; transparent: true"></a-torus>
-        </a-entity>
-        <a-camera position="0 0 1.2" look-controls="enabled: false" wasd-controls="enabled: false" fov="60"></a-camera>
-      </a-scene>
-      <p class="avatar-note">Robot 3D generado con geometría A-Frame. No necesita archivos GLB.</p>
-    </section>
+
+  <header class="topbar">
+    <a href="../../" class="volver">← Volver al portafolio</a>
+    <span class="marca">JAVI_OS / ASISTENTE_3D</span>
+  </header>
+
+  <main class="contenedor">
+
+    <div class="titulo">
+      <p class="etiqueta">// PROYECTO INTERACTIVO</p>
+      <h1>Asistente Virtual <span>3D</span></h1>
+      <p>
+        Habla o escribe. Soy un asistente de demostración
+        con respuestas programadas y síntesis de voz.
+      </p>
+    </div>
+
+    <div class="paneles">
+
+      <section class="chat-panel">
+
+        <div class="panel-header">
+          <span class="punto"></span>
+          TERMINAL DE COMUNICACIÓN
+        </div>
+
+        <div id="respuesta" class="mensajes" role="log" aria-live="polite">
+          <div class="mensaje bot">
+            <strong>Robot</strong>
+            <p>
+              ¡Hola! Pregúntame por mis servicios,
+              tecnología, proyectos o contacto.
+            </p>
+          </div>
+        </div>
+
+        <form id="formulario" class="formulario">
+
+          <label for="mensaje">Escribe tu mensaje</label>
+
+          <div class="entrada">
+            <input
+              id="mensaje"
+              type="text"
+              placeholder="Escribe tu mensaje..."
+              autocomplete="off"
+              maxlength="500"
+              required
+            >
+            <button type="submit">Enviar</button>
+          </div>
+
+        </form>
+
+        <div class="controles">
+          <button id="mic" type="button">🎤 Hablar</button>
+          <button id="voz" type="button">🔊 Leer última respuesta</button>
+          <button id="silenciar" type="button">🔇 Silenciar</button>
+        </div>
+
+        <p id="estado" class="estado" role="status">
+          Micrófono disponible en navegadores compatibles (requiere permiso).
+        </p>
+
+      </section>
+
+      <section class="robot-panel">
+
+        <div class="panel-header">
+          <span class="punto"></span>
+          AVATAR ONLINE
+        </div>
+
+        <div class="escena">
+
+          <a-scene
+            embedded
+            renderer="antialias: true; colorManagement: true"
+            background="color: #08120e"
+            vr-mode-ui="enabled: false"
+            device-orientation-permission-ui="enabled: false"
+          >
+
+            <a-entity
+              light="type: ambient; color: #b6ffd6; intensity: 1.3">
+            </a-entity>
+
+            <a-entity
+              light="type: directional; color: #ffffff; intensity: 1.8"
+              position="2 4 3">
+            </a-entity>
+
+            <a-entity
+              light="type: point; color: #00ff88; intensity: 2; distance: 8"
+              position="-2 2 1">
+            </a-entity>
+
+            <a-plane
+              rotation="-90 0 0"
+              position="0 -1.7 -3"
+              width="12"
+              height="12"
+              color="#0b2018">
+            </a-plane>
+
+            <a-cylinder
+              position="0 -1.55 -3"
+              radius="1.1"
+              height="0.15"
+              color="#123b29">
+            </a-cylinder>
+
+            <a-torus
+              position="0 -1.46 -3"
+              rotation="-90 0 0"
+              radius="0.9"
+              radius-tubular="0.025"
+              color="#00ff88"
+              material="emissive: #00ff88; emissiveIntensity: 0.6">
+            </a-torus>
+
+            <!-- ROBOT COMPLETO -->
+            <a-entity
+              id="robot"
+              position="0 -0.05 -3"
+              animation="property: position; from: 0 -0.05 -3; to: 0 0.12 -3; dir: alternate; dur: 1700; loop: true; easing: easeInOutSine"
+            >
+
+              <!-- Cuerpo -->
+              <a-box
+                position="0 -0.75 0"
+                width="1.15"
+                height="1.25"
+                depth="0.65"
+                color="#17251f"
+                material="metalness: 0.5; roughness: 0.35">
+              </a-box>
+
+              <a-box
+                position="0 -0.65 0.34"
+                width="0.65"
+                height="0.3"
+                depth="0.04"
+                color="#00ff88"
+                material="emissive: #00ff88; emissiveIntensity: 0.65">
+              </a-box>
+
+              <!-- Cuello -->
+              <a-cylinder
+                position="0 0.03 0"
+                radius="0.16"
+                height="0.28"
+                color="#53685e">
+              </a-cylinder>
+
+              <!-- Cabeza -->
+              <a-box
+                position="0 0.6 0"
+                width="1.45"
+                height="1.05"
+                depth="0.75"
+                color="#1b2b23"
+                material="metalness: 0.45; roughness: 0.3">
+              </a-box>
+
+              <!-- Pantalla facial -->
+              <a-box
+                position="0 0.62 0.39"
+                width="1.2"
+                height="0.77"
+                depth="0.035"
+                color="#06130d">
+              </a-box>
+
+              <!-- Ojos luminosos -->
+              <a-box
+                position="-0.32 0.75 0.43"
+                width="0.3"
+                height="0.13"
+                depth="0.025"
+                color="#00ff88"
+                material="emissive: #00ff88; emissiveIntensity: 1.5">
+              </a-box>
+
+              <a-box
+                position="0.32 0.75 0.43"
+                width="0.3"
+                height="0.13"
+                depth="0.025"
+                color="#00ff88"
+                material="emissive: #00ff88; emissiveIntensity: 1.5">
+              </a-box>
+
+              <!-- Boca -->
+              <a-box
+                id="boca"
+                position="0 0.38 0.44"
+                width="0.42"
+                height="0.045"
+                depth="0.025"
+                color="#00ff88"
+                material="emissive: #00ff88; emissiveIntensity: 1">
+              </a-box>
+
+              <!-- Antena -->
+              <a-cylinder
+                position="0 1.24 0"
+                radius="0.045"
+                height="0.3"
+                color="#7b9185">
+              </a-cylinder>
+
+              <a-sphere
+                position="0 1.42 0"
+                radius="0.11"
+                color="#00ff88"
+                material="emissive: #00ff88; emissiveIntensity: 1">
+              </a-sphere>
+
+              <!-- Brazos -->
+              <a-box
+                position="-0.83 -0.65 0"
+                width="0.35"
+                height="0.95"
+                depth="0.42"
+                color="#263c31">
+              </a-box>
+
+              <a-box
+                position="0.83 -0.65 0"
+                width="0.35"
+                height="0.95"
+                depth="0.42"
+                color="#263c31">
+              </a-box>
+
+              <!-- Manos -->
+              <a-sphere
+                position="-0.83 -1.2 0"
+                radius="0.2"
+                color="#00bb70">
+              </a-sphere>
+
+              <a-sphere
+                position="0.83 -1.2 0"
+                radius="0.2"
+                color="#00bb70">
+              </a-sphere>
+
+            </a-entity>
+
+            <a-camera
+              position="0 0.1 1.5"
+              look-controls="enabled: false"
+              wasd-controls="enabled: false">
+            </a-camera>
+
+          </a-scene>
+
+        </div>
+
+        <div class="robot-footer">
+          <span class="online">● ONLINE</span>
+          <span>MODEL: JAVI_BOT_V1</span>
+        </div>
+
+        <p class="nota">
+          Robot 3D generado con geometría A-Frame.
+          No necesita archivos GLB.
+        </p>
+
+      </section>
+
+    </div>
+
   </main>
-  <footer>© Javier Carrasco · Demo académica · Sin conexión a un modelo de IA generativa</footer>
-  <script src="script.js"></script>
+
+  <footer>
+    © Javier Carrasco · Demo académica ·
+    Sin conexión a un modelo de IA generativa
+  </footer>
+
 </body>
 </html>
