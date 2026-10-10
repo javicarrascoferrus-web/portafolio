@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d0b">
+<title>JAVI_OS — Modo videojuego</title>
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+<div class="scanlines" aria-hidden="true"></div>
+<header class="topbar">
+ <a href="../index.html" class="brand"><span class="prompt">~/</span>JAVI_OS<span class="muted">.exe</span></a>
+ <span class="online"><span class="online-dot"></span> SISTEMA EN LÍNEA</span>
+ <a href="../index.html" class="return">← Modo clásico</a>
+</header>
+<main class="layout">
+ <section class="game-panel" aria-label="Videojuego interactivo">
+  <div class="panel-head"><div class="lights"><i></i><i></i><i></i></div><span>javi@game: ~/mi-mundo</span><span class="build">BUILD 1.0</span></div>
+  <div class="stage" id="stage"><canvas id="game" width="960" height="576" aria-label="Habitación pixel art. Muévete con WASD o las flechas e interactúa con E." tabindex="0"></canvas>
+   <div class="toast" id="toast" aria-live="polite">¡Bienvenido! Acércate a los objetos y pulsa E.</div>
+   <div class="dialog hidden" id="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+    <div class="dialog-top"><span id="dialogTag">ARCHIVO ENCONTRADO</span><button id="closeDialog" aria-label="Cerrar ventana">✕</button></div>
+    <div class="dialog-content"><div class="dialog-icon" id="dialogIcon">⌘</div><div><h2 id="dialogTitle"></h2><p id="dialogText"></p><div id="dialogLinks"></div></div></div>
+    <div class="dialog-bottom">Pulsa ESC o el botón ✕ para continuar explorando</div>
+   </div>
+  </div>
+  <div class="statusbar"><span id="position">POS: 10, 8</span><span id="hint">ACÉRCATE A UN OBJETO</span><span id="progress">EXPLORADO 0/5</span></div>
+  <div class="mobile-controls" aria-label="Controles táctiles">
+    <div class="dpad"><button class="up" data-dir="up" aria-label="Arriba">▲</button><button class="left" data-dir="left" aria-label="Izquierda">◀</button><button class="down" data-dir="down" aria-label="Abajo">▼</button><button class="right" data-dir="right" aria-label="Derecha">▶</button></div>
+    <button class="action" id="touchAction">E <small>INTERACTUAR</small></button>
+  </div>
+ </section>
+ <aside class="sidebar">
+  <div class="profile">
+    <div class="avatar"><img src="retrato.png" alt="Ilustración pixel art de Javier en su escritorio"></div>
+    <div><div class="eyebrow">JUGADOR 01</div><h1>JAVIER<br><span>CARRASCO</span></h1><p>Desarrollador en formación</p></div>
+  </div>
+  <div class="side-box"><div class="box-title">> MISIÓN PRINCIPAL</div><p>Explora mi habitación, descubre mis proyectos y conoce mi historia como desarrollador.</p><div class="progress-track"><div id="progressFill"></div></div><div class="mission-meta"><span>OBJETOS DESCUBIERTOS</span><strong id="counter">0 / 5</strong></div></div>
+  <div class="side-box"><div class="box-title">> PUNTOS DE INTERÉS</div><ul class="legend">
+   <li><span>💻</span> Ordenador <b id="check-projects">○</b></li>
+   <li><span>📚</span> Biblioteca <b id="check-study">○</b></li>
+   <li><span>⚙️</span> Banco de herramientas <b id="check-skills">○</b></li>
+   <li><span>👤</span> Panel personal <b id="check-about">○</b></li>
+   <li><span>📡</span> Comunicaciones <b id="check-contact">○</b></li>
+  </ul></div>
+  <div class="side-box controls-box"><div class="box-title">> CONTROLES</div><p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> / <kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> Mover</p><p><kbd>E</kbd> / <kbd>ESPACIO</kbd> Interactuar</p><p><kbd>ESC</kbd> Cerrar ventana</p></div>
+ </aside>
+</main>
+<footer>© <span id="year"></span> JAVIER CARRASCO <span class="footer-right">HECHO CON JAVASCRIPT + CANVAS · SIN DEPENDENCIAS</span></footer>
+<script src="game.js"></script>
+</body></html>
