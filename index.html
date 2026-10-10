@@ -1,110 +1,233 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <title>Portfolio - Javier Carrasco</title>
+  <meta name="description"
+        content="Portafolio de Javier Carrasco, estudiante de Desarrollo de Aplicaciones Multiplataforma.">
 
+  <title>Javier Carrasco | Developer</title>
 
   <link rel="stylesheet" href="style.css">
 
-
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
 
-  <nav>
-    <h2>JC</h2>
 
-    <div>
+  <nav class="navbar">
+
+    <a href="#inicio" class="logo">
+      <span>~/</span>javier
+    </a>
+
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#sobre-mi">Sobre mí</a>
+      <a href="#tecnologias">Tecnologías</a>
       <a href="#contacto">Contacto</a>
-
-      <a href="https://destroy.spritefusion.com/?from=badge&url=https://javicarrascoferrus-web.github.io/portafolio/#proyectos"
-        target="_blank">
-
-        <img src="https://destroy.spritefusion.com/badge.svg"
-          alt="Destroy this website"
-          width="180"
-          height="40">
-
-      </a>
     </div>
+
+    <a class="destroy"
+       href="https://destroy.spritefusion.com/?from=badge&url=https://javicarrascoferrus-web.github.io/portafolio/"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <img
+        src="https://destroy.spritefusion.com/badge.svg"
+        alt="Destroy this website"
+        width="180"
+        height="40">
+
+    </a>
+
   </nav>
 
 
 
-  <header class="hero">
 
-    <h1>Bienvenid@ al portafolio de Javier</h1>
+  <header id="inicio" class="hero">
 
-    <p>
-      Estudiante de Desarrollo de Aplicaciones Multiplataforma.
-      Me gusta crear proyectos con Python, Flask, IA local y APIs.
-    </p>
+    <div class="terminal">
 
-    <div class="botones">
-      <a href="#proyectos">Ver proyectos</a>
-      <a href="#contacto" class="secundario">Contactar</a>
+      <div class="terminal-header">
+
+        <div class="terminal-dots">
+          <span class="red"></span>
+          <span class="yellow"></span>
+          <span class="green"></span>
+        </div>
+
+        <span>javier@portfolio: ~</span>
+
+      </div>
+
+      <div class="terminal-body">
+
+        <p class="command">
+          <span>javier@portfolio:~$</span>
+          whoami
+        </p>
+
+        <h1>
+          Hola, soy
+          <span class="highlight">
+            Javier Carrasco
+          </span>
+        </h1>
+
+        <p class="subtitle">
+          Estudiante de Desarrollo de Aplicaciones Multiplataforma
+        </p>
+
+        <p class="command">
+          <span>javier@portfolio:~$</span>
+          cat perfil.txt
+        </p>
+
+        <p class="description">
+          Apasionado por la programación, la tecnología
+          y el desarrollo de software.
+          Me gusta aprender nuevas herramientas,
+          crear proyectos y resolver problemas
+          mediante código.
+        </p>
+
+        <p class="command">
+          <span>javier@portfolio:~$</span>
+          <span id="typing"></span><span class="cursor">█</span>
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#proyectos" class="btn-primary">
+            <i class="fa-solid fa-code"></i>
+            Ver proyectos
+          </a>
+
+          <a href="#contacto" class="btn-secondary">
+            <i class="fa-solid fa-envelope"></i>
+            Contactar
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
 
   </header>
 
 
 
-  <section id="proyectos" class="proyectos">
 
-    <h2>Mis proyectos</h2>
+  <section id="proyectos" class="section">
 
-    <div class="grid">
+    <h2 class="section-title">
+      <span>01.</span> Mis proyectos
+    </h2>
 
-   
-      <div class="card">
+    <p class="section-description">
+      Algunos de los trabajos que he desarrollado
+      durante mi formación como programador.
+    </p>
 
-        <img src="img/captura 1.png" alt="Proyecto IA">
-        <img src="img/captura 2.png" alt="Proyecto IA">
+    <div class="projects-terminal">
 
-        <h3>Analizador IA de YouTube</h3>
+      <p class="command">
+        <span>javier@portfolio:~/github$</span>
+        ls -la
+      </p>
 
-        <p>
-          Aplicación en Python que analiza vídeos de YouTube
-          y genera resúmenes inteligentes usando IA local.
-        </p>
+      <a
+        href="https://github.com/javicarrascoferrus-web/Proyectos"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="project-link">
 
-        <span>Python · Flask · IA · APIs</span>
+        <div class="project-info">
 
-        <a href="https://linkedin.com" target="_blank">
-          Ver proyecto
-        </a>
+          <i class="fa-solid fa-folder-open"></i>
 
-      </div>
+          <div>
+            <h3>Proyectos/</h3>
+            <p>
+              Explora mis trabajos y código fuente en GitHub.
+            </p>
+          </div>
+
+        </div>
+
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+      </a>
+
+      <p class="terminal-output">
+        Directorio disponible en GitHub.
+      </p>
+
+    </div>
+
+    <a
+      class="github-button"
+      href="https://github.com/javicarrascoferrus-web/Proyectos"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <i class="fa-brands fa-github"></i>
+      Explorar repositorio
+
+    </a>
+
+  </section>
 
 
-      <div class="card">
 
-        <img src="img/captura 3.png" alt="Plataforma Educativa NaN">
-        <img src="img/captura 4.png" alt="Plataforma Educativa NaN">
-        <img src="img/captura 5.png" alt="Plataforma Educativa NaN">
 
-        <h3>Plataforma Educativa NaN</h3>
+  <section id="sobre-mi" class="section">
 
-        <p>
-          Plataforma educativa estilo mini-Moodle o campus virtual.
-        </p>
+    <h2 class="section-title">
+      <span>02.</span> Sobre mí
+    </h2>
 
-        <span>Python · Flask · HTML · CSS</span>
+    <div class="about-terminal">
 
-        <a href="https://github.com" target="_blank">
-          Ver proyecto
-        </a>
+      <p class="command">
+        <span>javier@portfolio:~$</span>
+        cat sobre-mi.txt
+      </p>
 
-      </div>
+      <p>
+        Soy estudiante de Desarrollo de Aplicaciones
+        Multiplataforma (DAM).
+      </p>
+
+      <p>
+        Me interesa especialmente el desarrollo
+        de aplicaciones, Python, Java,
+        las bases de datos y la inteligencia artificial.
+      </p>
+
+      <p>
+        Mi objetivo es seguir mejorando mis habilidades
+        y adquirir experiencia profesional
+        en el sector tecnológico.
+      </p>
+
+      <p>
+        En mi GitHub comparto algunos de los proyectos
+        y ejercicios que voy realizando.
+      </p>
 
     </div>
 
@@ -112,62 +235,57 @@
 
 
 
-  <section id="sobre-mi" class="sobre-mi">
 
-    <h2>Sobre mí</h2>
+  <section id="tecnologias" class="section">
 
-    <p>
-      Estudiante que está construyendo proyectos prácticos para mejorar
-      mis habilidades como programador.
+    <h2 class="section-title">
+      <span>03.</span> Tecnologías
+    </h2>
 
-      Me interesa especialmente Python, la inteligencia artificial
-      y el desarrollo web.
-
-      En este portafolio no caben todos los proyectos que he estado
-      haciendo, pero puedes ver el código en mi GitHub.
+    <p class="section-description">
+      Herramientas y lenguajes con los que trabajo.
     </p>
-
-  </section>
-
-
-
-  <section class="tecnologias">
-
-    <h2>Tecnologías</h2>
 
     <div class="tech-grid">
 
-
       <div class="tech">
         <i class="fa-brands fa-python"></i>
-        <span>PYTHON</span>
+        <span>Python</span>
       </div>
 
-
+      <div class="tech">
+        <i class="fa-brands fa-java"></i>
+        <span>Java</span>
+      </div>
 
       <div class="tech">
         <i class="fa-solid fa-database"></i>
-        <span>SQLITE</span>
+        <span>SQLite</span>
       </div>
-
 
       <div class="tech">
         <i class="fa-brands fa-html5"></i>
-        <span>HTML</span>
+        <span>HTML5</span>
       </div>
-
-
 
       <div class="tech">
         <i class="fa-brands fa-css3-alt"></i>
-        <span>CSS</span>
+        <span>CSS3</span>
       </div>
 
-
+      <div class="tech">
+        <i class="fa-brands fa-js"></i>
+        <span>JavaScript</span>
+      </div>
 
       <div class="tech">
         <i class="fa-brands fa-github"></i>
-        <span>GITHUB</span>
+        <span>GitHub</span>
+      </div>
+
+      <div class="tech">
+        <i class="fa-solid fa-code"></i>
+        <span>VS Code</span>
       </div>
 
     </div>
@@ -175,36 +293,67 @@
   </section>
 
 
+  
+  <section id="contacto" class="section contact-section">
 
-  <section id="contacto" class="contacto">
+    <h2 class="section-title">
+      <span>04.</span> Contacto
+    </h2>
 
-    <h2>Contacto</h2>
-
-    <p>
-      Puedes encontrarme en GitHub y LinkedIn.
+    <p class="section-description">
+      ¿Quieres contactar conmigo?
+      Puedes encontrarme en estas plataformas.
     </p>
 
-    <div class="enlaces-contacto">
+    <div class="contact-links">
 
-      <a href="https://github.com" target="_blank">
+      <a
+        href="https://github.com/javicarrascoferrus-web"
+        target="_blank"
+        rel="noopener noreferrer">
+
         <i class="fa-brands fa-github"></i>
         GitHub
+
       </a>
 
-      <a href="https://linkedin.com" target="_blank">
+      <a
+        href="https://www.linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+
         <i class="fa-brands fa-linkedin"></i>
         LinkedIn
+
       </a>
 
       <a href="mailto:javicarrascoferrus@gmail.com">
+
         <i class="fa-solid fa-envelope"></i>
         Email
+
       </a>
 
     </div>
 
   </section>
 
-</body>
 
+
+
+  <footer>
+
+    <p>
+      <span>javier@portfolio:~$</span>
+      exit
+    </p>
+
+    <p>
+      © <span id="year"></span> Javier Carrasco
+      | Desarrollado con HTML, CSS y JavaScript.
+    </p>
+
+  </footer>
+
+</body>
 </html>
