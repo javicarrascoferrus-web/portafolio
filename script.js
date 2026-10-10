@@ -1,6 +1,5 @@
 
 
-
 const frases = [
   "python proyectos.py",
   "java Main.java",
@@ -51,16 +50,19 @@ function escribir() {
 }
 
 
-
 if (typing) {
+
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     typing.textContent = frases[0];
   } else {
     escribir();
   }
+
 }
 
 
+const year = document.getElementById("year");
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
