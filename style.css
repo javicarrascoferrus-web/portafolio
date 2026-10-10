@@ -1,6 +1,5 @@
 
 
-
 :root {
   --background: #080d0b;
   --surface: #101914;
@@ -110,7 +109,7 @@ a {
 
 .terminal {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   border: 1px solid var(--border);
   background: var(--surface);
   border-radius: 12px;
@@ -153,8 +152,48 @@ a {
 }
 
 .terminal-body {
-  padding: 50px;
+  padding: 45px;
 }
+
+
+
+
+.hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 35px;
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+.hero-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 30px rgba(86, 227, 159, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(86, 227, 159, 0.25);
+}
+
+
+
 
 .command {
   color: var(--muted);
@@ -168,7 +207,7 @@ a {
 }
 
 h1 {
-  font-size: clamp(30px, 5vw, 55px);
+  font-size: clamp(30px, 4vw, 55px);
   line-height: 1.25;
   margin-bottom: 18px;
 }
@@ -247,7 +286,6 @@ h1 {
 
 
 
-
 .section {
   max-width: 1150px;
   margin: auto;
@@ -269,6 +307,7 @@ h1 {
   margin-bottom: 35px;
   max-width: 750px;
 }
+
 
 
 
@@ -401,6 +440,7 @@ h1 {
 }
 
 
+/* CONTACTO */
 
 .contact-section {
   padding-bottom: 120px;
@@ -434,7 +474,7 @@ h1 {
 }
 
 
-
+/* FOOTER */
 
 footer {
   padding: 35px 7%;
@@ -464,6 +504,15 @@ footer span {
 
   .nav-links {
     justify-content: center;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-image img {
+    max-width: 420px;
   }
 
   .tech-grid {
@@ -502,6 +551,15 @@ footer span {
   .terminal-header {
     padding: 12px;
     font-size: 11px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .hero-image img {
+    max-width: 350px;
   }
 
   .subtitle {
@@ -563,7 +621,11 @@ footer span {
 
 }
 
+
+
+
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -571,4 +633,5 @@ footer span {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
 }
