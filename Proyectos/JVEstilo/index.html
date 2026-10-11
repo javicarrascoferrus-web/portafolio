@@ -1,1 +1,411 @@
 
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="JVEstilo: laboratorio interactivo para generar CSS. Proyecto de Javier Carrasco.">
+
+  <title>JVEstilo | CSS Lab</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <a href="../../" class="volver">
+      <i class="fa-solid fa-arrow-left"></i>
+      Volver al portafolio
+    </a>
+
+    <span class="marca">
+      <i class="fa-solid fa-palette"></i>
+      JVESTILO
+    </span>
+
+  </header>
+
+  <main class="contenedor">
+
+    <section class="presentacion">
+
+      <p class="etiqueta">
+        // CSS LAB · DEMO INTERACTIVA
+      </p>
+
+      <h1>
+        Diseña. Prueba.
+        <span>Copia CSS.</span>
+      </h1>
+
+      <p>
+        Experimenta con propiedades CSS y observa
+        los cambios en tiempo real.
+        Personaliza el elemento y genera su código
+        automáticamente.
+      </p>
+
+    </section>
+
+
+    <div class="editor">
+
+      <!-- PANEL DE CONTROLES -->
+
+      <section class="panel controles">
+
+        <div class="panel-titulo">
+          <i class="fa-solid fa-sliders"></i>
+          <h2>Personalización</h2>
+        </div>
+
+        <div class="campo">
+
+          <label for="texto">
+            Texto del elemento
+          </label>
+
+          <input
+            type="text"
+            id="texto"
+            value="¡Hola, soy JVEstilo!"
+            maxlength="100">
+
+        </div>
+
+
+        <div class="colores">
+
+          <div class="campo">
+
+            <label for="fondo">
+              Color de fondo
+            </label>
+
+            <input
+              type="color"
+              id="fondo"
+              value="#7c3aed">
+
+          </div>
+
+          <div class="campo">
+
+            <label for="colorTexto">
+              Color del texto
+            </label>
+
+            <input
+              type="color"
+              id="colorTexto"
+              value="#ffffff">
+
+          </div>
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="tamano">
+            Tamaño de fuente:
+            <strong id="valorTamano">20px</strong>
+          </label>
+
+          <input
+            type="range"
+            id="tamano"
+            min="12"
+            max="48"
+            value="20">
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="padding">
+            Espaciado interior:
+            <strong id="valorPadding">24px</strong>
+          </label>
+
+          <input
+            type="range"
+            id="padding"
+            min="0"
+            max="60"
+            value="24">
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="margen">
+            Margen:
+            <strong id="valorMargen">0px</strong>
+          </label>
+
+          <input
+            type="range"
+            id="margen"
+            min="0"
+            max="60"
+            value="0">
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="radio">
+            Bordes redondeados:
+            <strong id="valorRadio">16px</strong>
+          </label>
+
+          <input
+            type="range"
+            id="radio"
+            min="0"
+            max="50"
+            value="16">
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="borde">
+            Grosor del borde:
+            <strong id="valorBorde">0px</strong>
+          </label>
+
+          <input
+            type="range"
+            id="borde"
+            min="0"
+            max="10"
+            value="0">
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="colorBorde">
+            Color del borde
+          </label>
+
+          <input
+            type="color"
+            id="colorBorde"
+            value="#4c1d95">
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="fuente">
+            Familia tipográfica
+          </label>
+
+          <select id="fuente">
+            <option value="Arial, sans-serif">
+              Arial
+            </option>
+
+            <option value="'Courier New', monospace">
+              Courier New
+            </option>
+
+            <option value="Georgia, serif">
+              Georgia
+            </option>
+
+            <option value="'Trebuchet MS', sans-serif">
+              Trebuchet MS
+            </option>
+          </select>
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="alineacion">
+            Alineación del texto
+          </label>
+
+          <select id="alineacion">
+
+            <option value="center">
+              Centro
+            </option>
+
+            <option value="left">
+              Izquierda
+            </option>
+
+            <option value="right">
+              Derecha
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="campo">
+
+          <label for="distribucion">
+            Distribución del contenedor
+          </label>
+
+          <select id="distribucion">
+
+            <option value="block">
+              Bloque
+            </option>
+
+            <option value="flex">
+              Flexbox
+            </option>
+
+            <option value="grid">
+              Grid
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <button id="restablecer"
+                class="boton-secundario"
+                type="button">
+
+          <i class="fa-solid fa-rotate-left"></i>
+          Restablecer estilos
+
+        </button>
+
+      </section>
+
+
+      <!-- VISTA PREVIA Y CÓDIGO -->
+
+      <div class="zona-resultado">
+
+        <section class="panel">
+
+          <div class="panel-titulo">
+            <i class="fa-solid fa-eye"></i>
+            <h2>Vista previa</h2>
+          </div>
+
+          <div class="lienzo">
+
+            <div id="elementoPreview">
+              ¡Hola, soy JVEstilo!
+            </div>
+
+          </div>
+
+          <p class="ayuda">
+            Los cambios se aplican automáticamente.
+          </p>
+
+        </section>
+
+
+        <section class="panel">
+
+          <div class="panel-titulo">
+            <i class="fa-solid fa-code"></i>
+            <h2>Código generado</h2>
+          </div>
+
+          <pre><code id="codigoCSS"></code></pre>
+
+          <button id="copiar"
+                  class="boton-principal"
+                  type="button">
+
+            <i class="fa-solid fa-copy"></i>
+            Copiar CSS
+
+          </button>
+
+          <p id="mensaje"
+             class="mensaje"
+             role="status"
+             aria-live="polite"></p>
+
+        </section>
+
+      </div>
+
+    </div>
+
+
+    <!-- INFORMACIÓN DEL PROYECTO -->
+
+    <section class="panel info-proyecto">
+
+      <div class="panel-titulo">
+        <i class="fa-solid fa-circle-info"></i>
+        <h2>Sobre JVEstilo</h2>
+      </div>
+
+      <p>
+        JVEstilo es un proyecto original desarrollado
+        en PHP para generar reglas y clases CSS
+        de manera dinámica.
+      </p>
+
+      <p>
+        Esta versión utiliza HTML, CSS y JavaScript
+        para ofrecer una demostración visual
+        compatible con GitHub Pages.
+      </p>
+
+      <p>
+        <strong>Tecnologías:</strong>
+        PHP · HTML · CSS · JavaScript
+      </p>
+
+      <a
+        href="https://github.com/javicarrascoferrus-web/Proyectos"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="enlace-github">
+
+        <i class="fa-brands fa-github"></i>
+        Ver proyectos en GitHub
+
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © Javier Carrasco · JVEstilo · Demo académica
+  </footer>
+
+</body>
+</html>
