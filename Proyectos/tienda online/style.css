@@ -1,1 +1,364 @@
 
+:root {
+  --fondo: #070d0a;
+  --panel: #101c15;
+  --panel2: #16251b;
+  --verde: #00ff88;
+  --texto: #edf7f0;
+  --gris: #9bb4a3;
+  --borde: #2a4935;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--verde);
+  outline-offset: 3px;
+}
+
+.topbar {
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  background: #0c1610;
+  border-bottom: 1px solid var(--borde);
+}
+
+.volver {
+  color: var(--verde);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.marca, .etiqueta {
+  color: var(--verde);
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.contenedor {
+  max-width: 1250px;
+  margin: auto;
+  padding: 50px 24px;
+}
+
+.presentacion {
+  margin-bottom: 35px;
+}
+
+h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  margin: 5px 0 12px;
+}
+
+h1 span {
+  color: var(--verde);
+}
+
+.presentacion > p:last-child {
+  max-width: 680px;
+  color: var(--gris);
+}
+
+.barra {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.barra input,
+.barra select {
+  background: var(--panel);
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 9px;
+  padding: 13px;
+}
+
+.barra input {
+  flex: 1;
+  min-width: 180px;
+}
+
+.barra select {
+  min-width: 170px;
+}
+
+.boton-carrito,
+.boton-comprar,
+.pie-carrito button {
+  border: none;
+  border-radius: 9px;
+  background: #098348;
+  color: white;
+  padding: 12px 17px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.boton-carrito:hover,
+.boton-comprar:hover,
+.pie-carrito button:hover {
+  background: #0ca65c;
+}
+
+#contador {
+  background: #063b23;
+  padding: 3px 8px;
+  border-radius: 20px;
+  margin-left: 5px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.producto {
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  border-color: var(--verde);
+}
+
+.producto-imagen {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #234833, #0b1510);
+  font-size: 75px;
+}
+
+.producto-info {
+  padding: 20px;
+}
+
+.producto-info h3 {
+  margin: 0 0 8px;
+}
+
+.descripcion {
+  color: var(--gris);
+  font-size: 14px;
+  min-height: 45px;
+}
+
+.precio {
+  font-size: 24px;
+  color: var(--verde);
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.boton-comprar {
+  width: 100%;
+}
+
+.info-proyecto {
+  margin-top: 55px;
+  padding: 25px;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  background: var(--panel);
+}
+
+.info-proyecto p {
+  color: var(--gris);
+}
+
+.enlace-github {
+  color: var(--verde);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.fondo-carrito {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9;
+}
+
+.fondo-carrito[hidden] {
+  display: none;
+}
+
+.panel-carrito {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: min(420px, 100%);
+  background: #102016;
+  border-left: 1px solid var(--borde);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(105%);
+  transition: transform 0.25s;
+  visibility: hidden;
+}
+
+.panel-carrito.abierto {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.cabecera-carrito {
+  padding: 20px;
+  border-bottom: 1px solid var(--borde);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecera-carrito h2 {
+  margin: 0;
+}
+
+.cabecera-carrito button {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 22px;
+}
+
+.lista-carrito {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.item-carrito {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.item-carrito h3 {
+  margin: 0 0 6px;
+}
+
+.item-carrito p {
+  margin: 0 0 10px;
+  color: var(--verde);
+}
+
+.cantidad {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cantidad button {
+  border: 1px solid var(--borde);
+  background: var(--panel2);
+  color: white;
+  border-radius: 6px;
+  padding: 5px 12px;
+}
+
+.pie-carrito {
+  padding: 20px;
+  border-top: 1px solid var(--borde);
+}
+
+.pie-carrito p {
+  font-size: 20px;
+}
+
+.pie-carrito button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.pie-carrito button.secundario {
+  background: #293d30;
+}
+
+.pie-carrito small {
+  color: var(--gris);
+}
+
+.notificacion {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0c5631;
+  border: 1px solid var(--verde);
+  border-radius: 10px;
+  padding: 12px 22px;
+  color: white;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  text-align: center;
+}
+
+.notificacion.visible {
+  opacity: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid var(--borde);
+  color: var(--gris);
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .contenedor {
+    padding: 30px 15px;
+  }
+
+  .topbar {
+    flex-wrap: wrap;
+  }
+
+  .barra input,
+  .barra select,
+  .boton-carrito {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
