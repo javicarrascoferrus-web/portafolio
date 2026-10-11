@@ -1,10 +1,5 @@
 
 
-/* =====================================
-   JVESTILO - CSS LAB
-   Javier Carrasco
-===================================== */
-
 :root {
   --fondo: #f5f3ff;
   --blanco: #ffffff;
@@ -15,7 +10,6 @@
   --borde: #ddd6fe;
 }
 
-/* GENERAL */
 
 * {
   box-sizing: border-box;
@@ -47,7 +41,7 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
-/* CABECERA */
+
 
 .topbar {
   background: var(--blanco);
@@ -75,7 +69,7 @@ select:focus-visible {
   letter-spacing: 1px;
 }
 
-/* CONTENEDOR */
+
 
 .contenedor {
   max-width: 1250px;
@@ -83,7 +77,7 @@ select:focus-visible {
   padding: 45px 24px;
 }
 
-/* PRESENTACIÓN */
+
 
 .presentacion {
   margin-bottom: 35px;
@@ -111,7 +105,7 @@ select:focus-visible {
   color: var(--gris);
 }
 
-/* DISTRIBUCIÓN DEL EDITOR */
+
 
 .editor {
   display: grid;
@@ -127,7 +121,7 @@ select:focus-visible {
   min-width: 0;
 }
 
-/* PANELES */
+
 
 .panel {
   background: var(--blanco);
@@ -155,7 +149,7 @@ select:focus-visible {
   margin: 0;
 }
 
-/* CAMPOS */
+
 
 .campo {
   display: flex;
@@ -205,7 +199,7 @@ select:focus-visible {
   gap: 15px;
 }
 
-/* VISTA PREVIA */
+
 
 .lienzo {
   min-height: 300px;
@@ -247,7 +241,7 @@ select:focus-visible {
   margin-bottom: 0;
 }
 
-/* CÓDIGO CSS */
+
 
 pre {
   background: #0f172a;
@@ -264,7 +258,7 @@ code {
   font-family: Consolas, "Courier New", monospace;
 }
 
-/* BOTONES */
+
 
 .boton-principal,
 .boton-secundario {
@@ -302,7 +296,8 @@ code {
   margin-bottom: 0;
 }
 
-/* INFORMACIÓN DEL PROYECTO */
+
+
 
 .info-proyecto {
   margin-top: 30px;
@@ -324,7 +319,7 @@ code {
   text-decoration: underline;
 }
 
-/* FOOTER */
+
 
 footer {
   text-align: center;
@@ -334,7 +329,7 @@ footer {
   border-top: 1px solid var(--borde);
 }
 
-/* RESPONSIVE */
+
 
 @media (max-width: 900px) {
   .editor {
