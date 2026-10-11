@@ -755,10 +755,7 @@ html {
     transform 0.7s ease;
 }
 
-/*
-  Animación de entrada al recibir la clase
-  .visible desde JavaScript.
-*/
+
 
 .section.visible,
 .projects-terminal.visible,
@@ -908,7 +905,6 @@ html {
 
   .project-info:hover,
   .tech:hover,
-  .hero-image:hover img,
   .btn-primary:hover,
   .btn-secondary:hover,
   .github-button:hover {
@@ -920,10 +916,6 @@ html {
 
 
 
-/* ==========================================
-   FOTO: ZOOM SUAVE SIN CONFLICTO DE ANIMACIONES
-   La imagen NO tiene animation; el contenedor sí.
-========================================== */
 
 .hero-image {
   /* Permitimos que la foto crezca sin recortarse. */
@@ -938,7 +930,13 @@ html {
 }
 
 .hero-image:hover img {
-  transform: scale(1.08);
-  filter: brightness(1.08);
+  transform: scale(1.045);
+  filter: brightness(1.04);
   box-shadow: 0 0 38px rgba(86, 227, 159, 0.28);
+}
+
+
+.hero-image:hover > img,
+.hero-image > img:hover {
+  transform: scale(1.045);
 }
