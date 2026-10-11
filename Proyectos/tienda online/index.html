@@ -1,1 +1,111 @@
 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo interactiva de tienda online de Javier Carrasco">
+  <title>Tienda Online | Javier Carrasco</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="../../" class="volver">← Volver al portafolio</a>
+    <span class="marca">JAVI_OS / TIENDA_ONLINE</span>
+  </header>
+
+  <main class="contenedor">
+
+    <section class="presentacion">
+      <p class="etiqueta">// DEMO INTERACTIVA</p>
+      <h1>Tienda <span>Online</span></h1>
+      <p>
+        Proyecto original desarrollado con Python y Flask.
+        Esta versión es una demostración interactiva
+        adaptada para GitHub Pages.
+      </p>
+    </section>
+
+    <section class="tienda">
+
+      <div class="barra">
+        <input
+          id="buscador"
+          type="search"
+          placeholder="Buscar productos..."
+          aria-label="Buscar productos"
+        >
+
+        <select id="categoria" aria-label="Filtrar por categoría">
+          <option value="todos">Todas las categorías</option>
+          <option value="perifericos">Periféricos</option>
+          <option value="audio">Audio</option>
+          <option value="accesorios">Accesorios</option>
+        </select>
+
+        <button id="abrirCarrito" class="boton-carrito" type="button">
+          🛒 Carrito <span id="contador">0</span>
+        </button>
+      </div>
+
+      <div id="productos" class="productos"></div>
+
+    </section>
+
+    <section class="info-proyecto">
+      <h2>Sobre el proyecto</h2>
+      <p>
+        Esta demo reproduce las principales funciones de una
+        tienda online: catálogo, búsqueda, filtros y carrito.
+        El proyecto original utiliza Python, Flask y sesiones.
+      </p>
+
+      <a
+        href="https://github.com/javicarrascoferrus-web/Proyectos"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="enlace-github"
+      >
+        Ver proyectos en GitHub ↗
+      </a>
+    </section>
+
+  </main>
+
+  <div id="fondoCarrito" class="fondo-carrito" hidden></div>
+
+  <aside
+    id="panelCarrito"
+    class="panel-carrito"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Carrito de compras"
+    aria-hidden="true"
+    inert
+  >
+    <div class="cabecera-carrito">
+      <h2>Tu carrito</h2>
+      <button id="cerrarCarrito" type="button" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div id="listaCarrito" class="lista-carrito"></div>
+
+    <div class="pie-carrito">
+      <p>Total: <strong id="total">0,00 €</strong></p>
+      <button id="comprar" type="button">Finalizar compra</button>
+      <button id="vaciar" type="button" class="secundario">Vaciar carrito</button>
+      <small>Demo académica. No se realizan pagos reales.</small>
+    </div>
+  </aside>
+
+  <div id="notificacion" class="notificacion" role="status" aria-live="polite"></div>
+
+  <footer>
+    © Javier Carrasco · Proyecto académico · Demo sin pagos reales
+  </footer>
+
+</body>
+</html>
