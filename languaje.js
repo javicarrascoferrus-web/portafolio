@@ -1,4 +1,4 @@
-// Traducción ES/EN: cada texto tiene su propio elemento, sin modificar iconos ni enlaces.
+
 const dictionary = {
   "es": {
     "t1": "Inicio",
