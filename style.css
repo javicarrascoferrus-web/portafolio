@@ -634,3 +634,32 @@ footer span {
   }
 
 }
+
+
+
+
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  background: rgba(86, 227, 159, 0.08);
+  color: var(--green);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.btn-cv:hover {
+  background: var(--green);
+  color: var(--background);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(86, 227, 159, 0.15);
+}
+.btn-cv:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+}
