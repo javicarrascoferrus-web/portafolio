@@ -663,3 +663,10 @@ footer span {
   outline: 2px solid var(--green);
   outline-offset: 4px;
 }
+
+
+.language-switch { display:flex; align-items:center; gap:4px; padding:4px; border:1px solid var(--border); border-radius:7px; }
+.lang-btn { background:transparent; color:var(--muted); border:0; border-radius:5px; padding:6px 9px; font:inherit; font-size:12px; cursor:pointer; transition:background .2s,color .2s; }
+.lang-btn:hover,.lang-btn.active { background:var(--green); color:var(--background); }
+.lang-btn:focus-visible { outline:2px solid var(--green); outline-offset:3px; }
+@media(max-width:650px) { .language-switch { margin:auto; } .lang-btn { padding:5px 7px; font-size:11px; } }
