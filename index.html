@@ -1,337 +1,201 @@
 
 <!DOCTYPE html>
+
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="Portafolio de Javier Carrasco, estudiante de Desarrollo de Aplicaciones Multiplataforma.">
-
-  <title>Javier Carrasco | Developer</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-  <script src="script.js" defer></script>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Portafolio de Javier Carrasco, estudiante de Desarrollo de Aplicaciones Multiplataforma." name="description"/>
+<title>Javier Carrasco | Developer</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
+<script defer="True" src="language.js"></script></head>
 <body>
-
-
-
-  <nav class="navbar">
-
-    <a href="#inicio" class="logo">
-      <span>~/</span>JC
+<nav class="navbar">
+<a class="logo" href="#inicio">
+<span>~/</span>JC
     </a>
-
-    <div class="nav-links">
-      <a href="#inicio">Inicio</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#tecnologias">Tecnologías</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-
-    <a class="destroy"
-       href="https://destroy.spritefusion.com/?from=badge&url=https://javicarrascoferrus-web.github.io/portafolio/"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <img
-        src="https://destroy.spritefusion.com/badge.svg"
-        alt="Destroy this website"
-        width="180"
-        height="40">
-
-    </a>
-
-  </nav>
-
-
-
-
-  <header id="inicio" class="hero">
-
-    <div class="terminal">
-
-      <div class="terminal-header">
-
-        <div class="terminal-dots">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
-        </div>
-
-        <span>javier@portfolio: ~</span>
-
-      </div>
-
-      <div class="terminal-body">
-
-        <div class="hero-content">
-
-          <div class="hero-text">
-
-            <p class="command">
-              <span>javier@portfolio:~$</span>
+<div class="nav-links">
+<a data-i18n="t1" href="#inicio">Inicio</a>
+<a data-i18n="t2" href="#proyectos">Proyectos</a>
+<a data-i18n="t3" href="#sobre-mi">Sobre mí</a>
+<a data-i18n="t4" href="#tecnologias">Tecnologías</a>
+<a data-i18n="t5" href="#contacto">Contacto</a>
+<div aria-label="Seleccionar idioma" class="language-switch" role="group"><button aria-pressed="true" class="lang-btn" data-lang="es" type="button">🇪🇸 ES</button><button aria-pressed="false" class="lang-btn" data-lang="en" type="button">🇬🇧 EN</button></div></div>
+<a class="destroy" href="https://destroy.spritefusion.com/?from=badge&amp;url=https://javicarrascoferrus-web.github.io/portafolio/" rel="noopener noreferrer" target="_blank">
+<img alt="Destroy this website" height="40" src="https://destroy.spritefusion.com/badge.svg" width="180"/>
+</a>
+</nav>
+<header class="hero" id="inicio">
+<div class="terminal">
+<div class="terminal-header">
+<div class="terminal-dots">
+<span class="red"></span>
+<span class="yellow"></span>
+<span class="green"></span>
+</div>
+<span>javier@portfolio: ~</span>
+</div>
+<div class="terminal-body">
+<div class="hero-content">
+<div class="hero-text">
+<p class="command">
+<span>javier@portfolio:~$</span>
               whoami
             </p>
-
-            <h1>
+<h1 data-i18n="t6">
               Hola, soy
               <span class="highlight">
                 Javier Carrasco
               </span>
-            </h1>
-
-            <p class="subtitle">
+</h1>
+<p class="subtitle" data-i18n="t7">
               Estudiante de Desarrollo de Aplicaciones Multiplataforma
             </p>
-
-            <p class="command">
-              <span>javier@portfolio:~$</span>
+<p class="command">
+<span>javier@portfolio:~$</span>
               cat perfil.txt
             </p>
-
-            <p class="description">
+<p class="description" data-i18n="t8">
               Apasionado por la programación, la tecnología
               y el desarrollo de software.
               Me gusta aprender nuevas herramientas,
               crear proyectos y resolver problemas
               mediante código.
             </p>
-
-            <p class="command">
-              <span>javier@portfolio:~$</span>
-              <span id="typing"></span><span class="cursor">█</span>
-            </p>
-
-            <div class="hero-buttons">
-
-              <a href="#proyectos" class="btn-primary">
-                <i class="fa-solid fa-code"></i>
+<p class="command">
+<span>javier@portfolio:~$</span>
+<span id="typing"></span><span class="cursor">█</span>
+</p>
+<div class="hero-buttons">
+<a class="btn-primary" data-i18n="t9" href="#proyectos">
+<i class="fa-solid fa-code"></i>
                 Ver proyectos
               </a>
-
-              <a href="#contacto" class="btn-secondary">
-                <i class="fa-solid fa-envelope"></i>
+<a class="btn-secondary" data-i18n="t10" href="#contacto">
+<i class="fa-solid fa-envelope"></i>
                 Contactar
               </a>
-
-
-<a href="Javier_Carrasco_CV.pdf"
-   download="Javier_Carrasco_CV.pdf"
-   class="btn-cv">
-  <i class="fa-solid fa-download"></i>
-  Descargar CV
-</a>
-
-
-              <a href="Juego/" class="btn-primary">
-                <i class="fa-solid fa-gamepad"></i>
+<a class="btn-cv" data-i18n="t11" download="Javier_Carrasco_CV.pdf" href="Javier_Carrasco_CV.pdf" type="application/pdf">
+<i aria-hidden="true" class="fa-solid fa-file-arrow-down"></i>
+                Descargar CV
+              </a>
+<a class="btn-primary" data-i18n="t12" href="Juego/">
+<i class="fa-solid fa-gamepad"></i>
                 Modo videojuego
               </a>
-
-            </div>
-
-          </div>
-
-
-          <div class="hero-image">
-
-            <img
-              src="FotoJavi.png"
-              alt="Javier Carrasco, desarrollador en formación"
-              width="1344"
-              height="1024">
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </header>
-
-
-
-
-  <section id="proyectos" class="section">
-
-    <h2 class="section-title">
-      <span>01.</span> Mis proyectos
+</div>
+</div>
+<div class="hero-image">
+<img alt="Javier Carrasco, desarrollador en formación" data-i18n-alt="photo" height="1024" src="FotoJavi.png" width="1344"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="section" id="proyectos">
+<h2 class="section-title" data-i18n="t13">
+<span>01.</span> Mis proyectos
     </h2>
-
-    <p class="section-description">
+<p class="section-description" data-i18n="t14">
       Explora algunas de las aplicaciones que he desarrollado
       durante mi formación como programador.
     </p>
-
-    <div class="projects-terminal">
-
-      <p class="command">
-        <span>javier@portfolio:~/proyectos$</span>
+<div class="projects-terminal">
+<p class="command">
+<span>javier@portfolio:~/proyectos$</span>
         ls -la
       </p>
-
-
-
-
-      <div class="project-info" style="margin: 25px 0;">
-
-        <i class="fa-solid fa-robot"
-           style="font-size: 35px; color: #00ff88;"></i>
-
-        <div>
-
-          <h3>Asistente Virtual 3D</h3>
-
-          <p>
+<div class="project-info" style="margin: 25px 0;">
+<i class="fa-solid fa-robot" style="font-size: 35px; color: #00ff88;"></i>
+<div>
+<h3 data-i18n="t15">Asistente Virtual 3D</h3>
+<p data-i18n="t18">
             Asistente interactivo desarrollado con JavaScript
             y A-Frame. Incluye un avatar tridimensional,
             reconocimiento de voz y respuestas habladas.
           </p>
-
-          <p style="margin-top: 12px;">
-            <span style="color: #00ff88;">
+<p style="margin-top: 12px;">
+<span style="color: #00ff88;">
               HTML · CSS · JavaScript · A-Frame
             </span>
-          </p>
-
-          <div style="
+</p>
+<div style="
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
             margin-top: 20px;
           ">
-
-            <a href="Proyectos/Asistente-3D/"
-               class="btn-primary">
-
-              <i class="fa-solid fa-play"></i>
+<a class="btn-primary" data-i18n="demo" href="Proyectos/Asistente-3D/">
+<i class="fa-solid fa-play"></i>
               Ver demo
 
             </a>
-
-            <a href="https://github.com/javicarrascoferrus-web/Proyectos"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn-secondary">
-
-              <i class="fa-brands fa-github"></i>
+<a class="btn-secondary" data-i18n="code" href="https://github.com/javicarrascoferrus-web/Proyectos" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github"></i>
               Ver código
 
             </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <p class="terminal-output">
+</div>
+</div>
+</div>
+<p class="terminal-output" data-i18n="t21">
         Proyecto disponible para demostración interactiva.
       </p>
-
-
-  
-
-      <hr style="
+<hr style="
         border: none;
         border-top: 1px solid #234b35;
         margin: 35px 0;
-      ">
-
-
-  
-
-      <div class="project-info" style="margin: 25px 0;">
-
-        <i class="fa-solid fa-cart-shopping"
-           style="font-size: 35px; color: #00ff88;"></i>
-
-        <div>
-
-          <h3>Tienda Online</h3>
-
-          <p>
+      "/>
+<div class="project-info" style="margin: 25px 0;">
+<i class="fa-solid fa-cart-shopping" style="font-size: 35px; color: #00ff88;"></i>
+<div>
+<h3 data-i18n="t16">Tienda Online</h3>
+<p data-i18n="t19">
             Aplicación de comercio electrónico desarrollada
             originalmente con Python y Flask. Incluye
             catálogo de productos, buscador, filtros,
             carrito de compras y simulación de compra.
           </p>
-
-          <p style="margin-top: 12px;">
-            <span style="color: #00ff88;">
+<p style="margin-top: 12px;">
+<span style="color: #00ff88;">
               Python · Flask · HTML · CSS · JavaScript
             </span>
-          </p>
-
-          <div style="
+</p>
+<div style="
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
             margin-top: 20px;
           ">
-
-            <a href="Proyectos/tienda%20online/"
-               class="btn-primary">
-
-              <i class="fa-solid fa-play"></i>
+<a class="btn-primary" data-i18n="demo" href="Proyectos/tienda%20online/">
+<i class="fa-solid fa-play"></i>
               Ver demo
 
             </a>
-
-            <a href="https://github.com/javicarrascoferrus-web/Proyectos"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn-secondary">
-
-              <i class="fa-brands fa-github"></i>
+<a class="btn-secondary" data-i18n="code" href="https://github.com/javicarrascoferrus-web/Proyectos" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github"></i>
               Ver código
 
             </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <p class="terminal-output">
+</div>
+</div>
+</div>
+<p class="terminal-output" data-i18n="t22">
         Demo interactiva con catálogo, carrito y compra simulada.
       </p>
 
-
-      <!-- SEPARADOR -->
-
-      <hr style="
+<hr style="
         border: none;
         border-top: 1px solid #234b35;
         margin: 35px 0;
-      ">
-
-
-   
-
-      <div class="project-info" style="margin: 25px 0;">
-
-        <i class="fa-solid fa-palette"
-           style="font-size: 35px; color: #00ff88;"></i>
-
-        <div>
-
-          <h3>JVEstilo — Generador CSS</h3>
-
-          <p>
+      "/>
+<div class="project-info" style="margin: 25px 0;">
+<i class="fa-solid fa-palette" style="font-size: 35px; color: #00ff88;"></i>
+<div>
+<h3 data-i18n="t17">JVEstilo — Generador CSS</h3>
+<p data-i18n="t20">
             Herramienta desarrollada originalmente con PHP
             para generar estilos CSS de forma dinámica.
             Incluye una demo interactiva donde puedes
@@ -339,228 +203,146 @@
             bordes y distribuciones, visualizando
             los cambios en tiempo real.
           </p>
-
-          <p style="margin-top: 12px;">
-            <span style="color: #00ff88;">
+<p style="margin-top: 12px;">
+<span style="color: #00ff88;">
               PHP · HTML · CSS · JavaScript
             </span>
-          </p>
-
-          <div style="
+</p>
+<div style="
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
             margin-top: 20px;
           ">
-
-            <a href="Proyectos/JVEstilo/"
-               class="btn-primary">
-
-              <i class="fa-solid fa-play"></i>
+<a class="btn-primary" data-i18n="demo" href="Proyectos/JVEstilo/">
+<i class="fa-solid fa-play"></i>
               Ver demo
 
             </a>
-
-            <a href="https://github.com/javicarrascoferrus-web/Proyectos"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn-secondary">
-
-              <i class="fa-brands fa-github"></i>
+<a class="btn-secondary" data-i18n="code" href="https://github.com/javicarrascoferrus-web/Proyectos" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github"></i>
               Ver código
 
             </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <p class="terminal-output">
+</div>
+</div>
+</div>
+<p class="terminal-output" data-i18n="t23">
         Generador visual de CSS disponible para demostración interactiva.
       </p>
-
-    </div>
-
-
-  
-
-    <a class="github-button"
-       href="https://github.com/javicarrascoferrus-web/Proyectos"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fa-brands fa-github"></i>
+</div>
+<a class="github-button" data-i18n="t24" href="https://github.com/javicarrascoferrus-web/Proyectos" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github"></i>
       Explorar todos mis proyectos
 
     </a>
-
-  </section>
-
-
-
-
-  <section id="sobre-mi" class="section">
-
-    <h2 class="section-title">
-      <span>02.</span> Sobre mí
+</section>
+<section class="section" id="sobre-mi">
+<h2 class="section-title" data-i18n="t25">
+<span>02.</span> Sobre mí
     </h2>
-
-    <div class="about-terminal">
-
-      <p class="command">
-        <span>javier@portfolio:~$</span>
+<div class="about-terminal">
+<p class="command">
+<span>javier@portfolio:~$</span>
         cat sobre-mi.txt
       </p>
-
-      <p>
+<p data-i18n="t26">
         Soy estudiante de Desarrollo de Aplicaciones
         Multiplataforma (DAM).
       </p>
-
-      <p>
+<p data-i18n="t27">
         Me interesa especialmente el desarrollo
         de aplicaciones, Python, Java,
         las bases de datos y la inteligencia artificial.
       </p>
-
-      <p>
+<p data-i18n="t28">
         Mi objetivo es seguir mejorando mis habilidades
         y adquirir experiencia profesional
         en el sector tecnológico.
       </p>
-
-      <p>
+<p data-i18n="t29">
         En mi GitHub comparto algunos de los proyectos
         y ejercicios que voy realizando.
       </p>
-
-    </div>
-
-  </section>
-
-
-
-
-  <section id="tecnologias" class="section">
-
-    <h2 class="section-title">
-      <span>03.</span> Tecnologías
+</div>
+</section>
+<section class="section" id="tecnologias">
+<h2 class="section-title" data-i18n="t30">
+<span>03.</span> Tecnologías
     </h2>
-
-    <p class="section-description">
+<p class="section-description" data-i18n="t31">
       Herramientas y lenguajes con los que trabajo.
     </p>
-
-    <div class="tech-grid">
-
-      <div class="tech">
-        <i class="fa-brands fa-python"></i>
-        <span>Python</span>
-      </div>
-
-      <div class="tech">
-        <i class="fa-brands fa-java"></i>
-        <span>Java</span>
-      </div>
-
-      <div class="tech">
-        <i class="fa-solid fa-database"></i>
-        <span>SQLite</span>
-      </div>
-
-      <div class="tech">
-        <i class="fa-brands fa-html5"></i>
-        <span>HTML5</span>
-      </div>
-
-      <div class="tech">
-        <i class="fa-brands fa-css3-alt"></i>
-        <span>CSS3</span>
-      </div>
-
-      <div class="tech">
-        <i class="fa-brands fa-js"></i>
-        <span>JavaScript</span>
-      </div>
-
-      <div class="tech">
-        <i class="fa-brands fa-github"></i>
-        <span>GitHub</span>
-      </div>
-
-      <div class="tech">
-        <i class="fa-solid fa-code"></i>
-        <span>VS Code</span>
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-
-  <section id="contacto" class="section contact-section">
-
-    <h2 class="section-title">
-      <span>04.</span> Contacto
+<div class="tech-grid">
+<div class="tech">
+<i class="fa-brands fa-python"></i>
+<span>Python</span>
+</div>
+<div class="tech">
+<i class="fa-brands fa-java"></i>
+<span>Java</span>
+</div>
+<div class="tech">
+<i class="fa-solid fa-database"></i>
+<span>SQLite</span>
+</div>
+<div class="tech">
+<i class="fa-brands fa-html5"></i>
+<span>HTML5</span>
+</div>
+<div class="tech">
+<i class="fa-brands fa-css3-alt"></i>
+<span>CSS3</span>
+</div>
+<div class="tech">
+<i class="fa-brands fa-js"></i>
+<span>JavaScript</span>
+</div>
+<div class="tech">
+<i class="fa-brands fa-github"></i>
+<span>GitHub</span>
+</div>
+<div class="tech">
+<i class="fa-solid fa-code"></i>
+<span>VS Code</span>
+</div>
+</div>
+</section>
+<section class="section contact-section" id="contacto">
+<h2 class="section-title" data-i18n="t32">
+<span>04.</span> Contacto
     </h2>
-
-    <p class="section-description">
+<p class="section-description" data-i18n="t33">
       ¿Quieres contactar conmigo?
       Puedes encontrarme en estas plataformas.
     </p>
-
-    <div class="contact-links">
-
-      <a
-        href="https://github.com/javicarrascoferrus-web"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        <i class="fa-brands fa-github"></i>
+<div class="contact-links">
+<a href="https://github.com/javicarrascoferrus-web" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github"></i>
         GitHub
 
       </a>
-
-      <a
-        href="https://www.linkedin.com/in/javier-carrasco-9211b0356/"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        <i class="fa-brands fa-linkedin"></i>
+<a href="https://www.linkedin.com/in/javier-carrasco-9211b0356/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
         LinkedIn
 
       </a>
-
-      <a href="mailto:javicarrascoferrus@gmail.com">
-
-        <i class="fa-solid fa-envelope"></i>
+<a href="mailto:javicarrascoferrus@gmail.com">
+<i class="fa-solid fa-envelope"></i>
         Email
 
       </a>
-
-    </div>
-
-  </section>
-
-
-
-  <footer>
-
-    <p>
-      <span>javier@portfolio:~$</span>
+</div>
+</section>
+<footer>
+<p>
+<span>javier@portfolio:~$</span>
       exit
     </p>
-
-    <p>
+<p>
       © <span id="year"></span> Javier Carrasco
       | Desarrollado con HTML, CSS y JavaScript.
     </p>
-
-  </footer>
-
+</footer>
 </body>
 </html>
